@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html data-ng-app lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Gary K. Rubio Cadena">
+    <title>{% block title %}Gary Rubio Music{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    {#<h1 class="col-md-offset-6 col-xs-offset-1 col-md-6 col-sm-6 col-xs-10 ">Aquí podría venir una imagen y o cosa</h1>#}
+    <h1 class="">Aquí podría venir una imagen y o cosa</h1>
+</header>
+<nav id="sidebar-wrapper" class="col-md-1 col-xs-12">
+    <ul class="sidebar-nav">
+        <li class="col-xs-12">
+            <a href="#">Genre</a>
+        </li>
+        <li class="col-xs-12">
+            <a href="#">Mood</a>
+        </li>
+        <li class="col-xs-12">
+            <a href="#">Tempo</a>
+        </li>
+        <li class="col-xs-12">
+            <a href="#">Duration</a>
+        </li>
+    </ul>
+</nav>
+<div id="wrapper" class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+
+        <div class="contenido col-md-offset-1 col-md-10 col-xs-12 ">
+        <!-- /#sidebar-wrapper -->
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        </div>
+        {#<script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>#}
+        {#<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>#}
+        {#<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>#}
+    </div>
+</div>
+<footer>
+<span>Made with love by JohanDroid</span>
+</footer>
+</body>
+</html>
